@@ -71,11 +71,6 @@
 USE instagram;
 ```
 
-4. 执行 SQL 分析脚本：
-
-```powershell
-Get-Content sql\instagram_user_analysis.sql | & 'H:\MySQL\MySQL Server 8.0\bin\mysql.exe' -h localhost -P 3306 -u root -p instagram
-```
 
 完整查询说明见：
 
