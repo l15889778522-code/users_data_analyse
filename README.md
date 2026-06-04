@@ -1,14 +1,9 @@
 # instagram用户数据分析
 
-这是一个基于 MySQL 的用户数据分析项目，使用开源项目 [tushar2704/Instagram-User-Analytics](https://github.com/tushar2704/Instagram-User-Analytics) 提供的原始 CSV 数据，对类 Instagram 社交平台的用户增长、内容生产、互动行为、关注关系和用户分层进行分析。
+这是一个基于 MySQL 的用户数据分析项目，对类 Instagram 社交平台的用户增长、内容生产、互动行为、关注关系和用户分层进行分析。
 
 项目目标是把原始用户行为数据整理成一份适合简历展示的数据分析作品：既包含可复现的数据文件，也包含 SQL 分析脚本、完整查询文档和用户数据分析报告。
 
-## 数据来源
-
-原始数据来自：
-
-[tushar2704/Instagram-User-Analytics](https://github.com/tushar2704/Instagram-User-Analytics)
 
 源项目许可证：Apache License 2.0
 
