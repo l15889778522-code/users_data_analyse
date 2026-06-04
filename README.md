@@ -43,6 +43,8 @@
 ```text
 .
 ├── README.md
+├── data
+│   └── instagram_schema_data.sql
 ├── docs
 │   └── user_report.md
 ├── instagram_user_report_sql.md
@@ -52,23 +54,29 @@
 
 ## 如何复现
 
-1. 启动 MySQL，并确保本地存在 `instagram` 数据库。
+1. 启动 MySQL。
 2. 连接数据库：
 
 ```powershell
 & 'H:\MySQL\MySQL Server 8.0\bin\mysql.exe' -h localhost -P 3306 -u root -p
 ```
 
-3. 切换数据库：
+3. 导入项目数据：
+
+```powershell
+Get-Content data\instagram_schema_data.sql | & 'H:\MySQL\MySQL Server 8.0\bin\mysql.exe' -h localhost -P 3306 -u root -p
+```
+
+4. 切换数据库：
 
 ```sql
 USE instagram;
 ```
 
-4. 执行 SQL 脚本：
+5. 执行 SQL 分析脚本：
 
 ```powershell
-& 'H:\MySQL\MySQL Server 8.0\bin\mysql.exe' -h localhost -P 3306 -u root -p instagram < sql\instagram_user_analysis.sql
+Get-Content sql\instagram_user_analysis.sql | & 'H:\MySQL\MySQL Server 8.0\bin\mysql.exe' -h localhost -P 3306 -u root -p instagram
 ```
 
 ## 可展示技能
@@ -84,4 +92,3 @@ USE instagram;
 ## 适合放在简历里的项目描述
 
 使用 MySQL 对类 Instagram 社交平台数据进行用户行为分析，围绕用户增长、活跃分层、内容生产、互动质量和关注网络构建 SQL 分析链路。通过 CTE、多表关联、窗口函数和条件聚合识别出平台核心问题：互动密度高但内容供给不足，并提出创作者激活、低发图用户转化和热门标签运营等业务建议。
-
