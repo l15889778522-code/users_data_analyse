@@ -1,0 +1,15 @@
+# Local and generated files
+*.log
+*.tmp
+*.bak
+
+# Database dumps can be large or sensitive
+*.sql.gz
+*.dump
+*.backup
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
